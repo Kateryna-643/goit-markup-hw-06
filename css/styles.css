@@ -166,21 +166,14 @@ address {
     background-color: #404BBF;
 }
 
-.features {
+/*.features {
     padding-top: 120px;
     padding-bottom: 120px;
-}
+}*/
 
 .icon-background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 112px;
-    padding: 24px 100px;
-    background-color: #F4F4FD;
-    border-radius: 4px;
-    border: 1px solid var(--LIGHT-SLATE, #8E8F99);
-    margin-bottom: 8px;
+    display: none;
+   
 }
 
 .visually-hidden {
@@ -198,31 +191,37 @@ address {
 
 .features-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 
 .features-list-item {
-    width: calc((100% - 72px) / 4);
+    width: 100%;
 }
 
 .features-subtitle {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .features-item-text {
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
 .section-team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .team-title {
@@ -237,7 +236,9 @@ address {
 
 .team-members {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px;
 }
 
 .team-name {
@@ -251,12 +252,11 @@ address {
 }
 
 .team-img {
+    width: 264px;
     background-color: #FFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-
-
 
 .team-member-info {
     padding: 32px 0;
@@ -309,15 +309,14 @@ address {
 }
 
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+    gap: 48px;
 }
 
 .portfolio-title{
@@ -356,7 +355,7 @@ transform: translateY(0%);
 }
 
 .portfolio-item-picture {
-    
+    width: 100%;
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -394,7 +393,19 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .footer {
     background-color: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-title {
@@ -405,13 +416,12 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 16px;
-    display: inline-block;
+    
 }
 
 .logo-colored-footer {
     color: #f4f4fd;
-    display: inline-block;
+    
 }
 
 .footer-descr {
@@ -419,13 +429,10 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    max-width: 264px;
+    max-width: 288px;
+    margin-top: 16px;
 }
 
-
-.footer-logo-descr {
-    margin-right: 120px;
-}
 
 .footer-socials-text {
     color:  #FFF;
@@ -433,7 +440,9 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-top: 72px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .socials-icon-link:hover,
@@ -455,35 +464,41 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .footer-icons-list {
     display: flex;
+    flex-direction: row;
     gap: 16px;
-    margin-right: 80px;
+    
 }
 
 .subscribe-text {
+    margin-top: 72px;
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
+    text-align: center;
 }
 
 .footer-form {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
 .email-input {
-    width: 264px;
+    width: 288px;
     height: 40px;
-    border: 1px solid #ffffff;
     background-color: transparent;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
     padding-left: 16px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    border: 1px solid #FFF;
+    opacity: 0.3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: #ffffff;
 }
 
@@ -492,8 +507,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .footer-form-btn {
-    min-width: 165px;
-    height: 40px;
+    padding: 8px 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -507,16 +521,12 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
+    gap: 16px;
 }
 
-.footer-btn-icon {
-    margin-left: 16px;
-}
 
-.footer-container {
-    display: flex;
-    align-items: baseline;
-}
+
+
 
 .modal-container {
     position: fixed;
@@ -800,6 +810,21 @@ color: #404BBF;
     width: 100%;
 }
 
+.features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.features-list-item {
+    width: 356px;
+}
+
+.features-subtitle {
+    text-align: start;
+}
+
 @media (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -814,12 +839,68 @@ color: #404BBF;
     margin-bottom: 36px;
 }
 
+.team-members {
+    column-gap: 24px;
+    row-gap: 64px;
+}
+
+.portfolio-list {
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.portfolio-item-picture {
+    width: calc((100% - 24px) / 2);
+}
+
+.footer {
+    padding-left: 108px;
+}
+
+.footer-container {
+    flex-direction: row;
+    gap: 24px;
+    padding: 0;
+}
+
+.logo-title {
+    align-self: flex-start;
+}
+
+.footer-socials-text {
+    margin-top: 0px;
+    text-align: left;
+}
+
+.social-media-wrap {
+    align-self: baseline;
+}
+
+.footer-descr {
+    width: 264px;
+}
+
+.subscribe-text {
+    text-align: start;
+    
+}
+
+.footer-form {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.email-input {
+    width: 264px;
+}
+
 }
 
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .header-logo {
@@ -844,8 +925,6 @@ color: #404BBF;
     width: 100%;
 }
 
-
-
 @media (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -853,4 +932,72 @@ color: #404BBF;
     }
 }
 
+.icon-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    padding: 24px 100px;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+    margin-bottom: 8px;
 }
+
+.features-list {
+    flex-wrap: nowrap;
+}
+
+.features-subtitle {
+    font-size: 20px;
+    }
+
+.features-item-text {
+    font-weight: 400;
+}
+
+.features-list {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.team-members {
+    flex-direction: row;
+    gap: 24px;
+}
+
+.portfolio-list {
+    justify-content: center;
+}
+
+.portfolio-item-picture {
+    width: 360px;
+}
+
+.footer-container {
+    gap: 120px;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    display: flex;
+    padding: 100px 15px;
+}
+
+.subscribe-text {
+    margin-top: 0px;
+}
+
+.social-media-wrap {
+    margin-right: 80px;
+}
+
+}
+
