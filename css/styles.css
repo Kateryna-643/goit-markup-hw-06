@@ -180,7 +180,7 @@ padding-left: 16px;
 }
 
 .is-open {
-    opacity: 0;
+    opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
@@ -275,10 +275,13 @@ padding-left: 16px;
     display: flex;
     flex-direction: column;
     gap: 72px;
+    
+}
+
+.features {
     padding-top: 96px;
     padding-bottom: 96px;
 }
-
 
 .features-list-item {
     width: 100%;
@@ -515,6 +518,9 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     margin-top: 16px;
 }
 
+.social-media-wrap {
+    margin-top: 72px;
+}
 
 .footer-socials-text {
     color:  #FFF;
@@ -522,7 +528,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-top: 72px;
     margin-bottom: 16px;
     text-align: center;
 }
@@ -543,6 +548,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
+
 
 .footer-icons-list {
     display: flex;
@@ -932,14 +938,22 @@ color: #404BBF;
     width: calc((100% - 24px) / 2);
 }
 
-.footer {
-    padding-left: 108px;
-}
+
 
 .footer-container {
     flex-direction: row;
     gap: 24px;
-    padding: 0;
+    flex-wrap: wrap;
+    max-width: 530px;
+}
+
+.footer-logo-descr {
+    align-self:last baseline;
+}
+
+.social-media-wrap {
+    align-self:first baseline;
+    margin-top: 0;
 }
 
 .logo-title {
@@ -947,12 +961,7 @@ color: #404BBF;
 }
 
 .footer-socials-text {
-    margin-top: 0px;
     text-align: left;
-}
-
-.social-media-wrap {
-    align-self: baseline;
 }
 
 .footer-descr {
@@ -1005,7 +1014,7 @@ color: #404BBF;
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/hero-bg-dt.jpg);
-    width: 100%;
+    max-width: 1440px;
 }
 
 @media (min-resolution: 192dpi) {
@@ -1031,17 +1040,16 @@ color: #404BBF;
     flex-wrap: nowrap;
 }
 
+.features-list-item {
+    width: 264px;
+}
+
 .features-subtitle {
     font-size: 20px;
     }
 
 .features-item-text {
     font-weight: 400;
-}
-
-.features-list {
-    padding-top: 120px;
-    padding-bottom: 120px;
 }
 
 .section-team {
@@ -1063,15 +1071,23 @@ color: #404BBF;
 }
 
 .footer-container {
-    gap: 120px;
+    gap: unset;
     align-items: baseline;
-    margin: 0;
-    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.footer-logo-descr {
+    margin-right: 120px;
 }
 
 .footer {
     display: flex;
     padding: 100px 15px;
+}
+
+.footer-form {
+    gap: 24px;
 }
 
 .subscribe-text {
